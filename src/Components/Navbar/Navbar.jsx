@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <div className="work">
@@ -22,32 +24,33 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-4"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-              </li>
-              <li><a>Item 3</a>
-              </li>
+              <Link className="btn btn-outline btn-info" to={"/"}>
+                Home
+              </Link>
+              <Link className="btn btn-outline btn-info" to={"/ListedBookes"}>
+                Listed Bookes
+              </Link>
+              <Link className="btn btn-outline btn-info" to={"/PagetoRead"}>
+                Pages to Read
+              </Link>
             </ul>
           </div>
           <a className="btn btn-ghost text-3xl font-bold">Book Vibe</a>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-2xl">
-            <li><a>Home</a>
-            </li>
-            <li>
-              <a>Listed Book</a>
-            </li>
-            <li>
-              <a>Page to Read</a>
-            </li>
-          </ul>
+        <div className="navbar-center hidden lg:flex gap-4 text-2xl ">
+          <Link className="btn btn-outline btn-info" to={"/"}>
+            Home
+          </Link>
+          <Link className="btn btn-outline btn-info" to={"/ListedBookes"}>
+            Listed Bookes
+          </Link>
+          <Link className="btn btn-outline btn-info" to={"/PagetoRead"}>
+            Pages to Read
+          </Link>
         </div>
+
         <div className="navbar-end gap-3 ">
           <a className="btn bg-[#23be0a] text-white">Sign in</a>
           <a className="btn bg-[#59C6D2] text-white">Sign up</a>
