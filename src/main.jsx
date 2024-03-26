@@ -8,6 +8,9 @@ import PagetoRead from "./Components/Page to Read/PagetoRead";
 import HomePage from "./Components/Home page/HomePage";
 import BookDetails from "./Components/Home page/BookDetails";
 
+
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: ()=> fetch('./public/BooksData.json'),
+        loader: ()=> fetch('/BooksData.json'),
         element: <HomePage></HomePage>,
       },
       {
@@ -27,9 +30,13 @@ const router = createBrowserRouter([
         element: <PagetoRead></PagetoRead>,
       },
       {
-        path:'/BookDetails',
+        path:'/bookes/:id',
+        loader:()=> fetch(`/BooksData.json`),
+        loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`),
         element:<BookDetails></BookDetails>
       }
+      
+     
     ],
   },
 ]);

@@ -3,7 +3,7 @@ import BookItem from "./BookItem";
 import bannerImg from "../../../public/image/bannar.png";
 
 const HomePage = () => {
-  const BooksData = useLoaderData();
+  const BookesData = useLoaderData([]);
   //   console.log(BooksData);
   return (
     <div>
@@ -23,14 +23,16 @@ const HomePage = () => {
         </div>
       </div>
       <h1 className="text-4xl font-bold text-center mt-20">
-        Books : {BooksData.length}
+        Books : {BookesData.length}
       </h1>
 
       {/* use card */}
       <div  className="grid md:grid-cols-3 gap-4 mt-10">
-        {BooksData.map((bookes) => (
-          <BookItem key={BooksData.id} bookes={bookes}></BookItem>
-        ))}
+        {
+            BookesData.map( bookes => (
+            <BookItem key={BookesData.id} bookes={bookes}></BookItem>
+            ))
+        }
       </div>
     </div>
   );
