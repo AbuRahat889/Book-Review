@@ -2,11 +2,11 @@ import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 const BookItem = ({ bookes }) => {
-  const { bookId, image, bookName, author, rating, tags, category } = bookes;
+  const { id, image, bookName, author, rating, tags, category } = bookes;
 
   return (
     <div>
-      <Link to={`/bookes/${bookId}`}>
+      <Link to={`/bookes/${id}`}>
         <div className="card w-96 bg-base-100 shadow-xl border">
           <figure className="px-10 pt-10">
             <img src={image} alt="Error" className="rounded-xl" />

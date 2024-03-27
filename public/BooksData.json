@@ -1,6 +1,6 @@
 [
     {
-      "bookId": 1,
+      "id": 1,
       "bookName": "Harry Potter and the Philosopher's",
       "author": "J.K. Rowling",
       "image": "https://i.ibb.co/0ZnN9xL/pngwing-1-1.png",
@@ -8,12 +8,12 @@
       "totalPages": 320,
       "rating": 4.7,
       "category": "Fantasy",
-      "tags": ["Magic", "Adventure", "Friendship"],
+      "tags": ["Magic", "Friendship"],
       "publisher": "Scholastic",
       "yearOfPublishing": 1997
     },
     {
-      "bookId": 2,
+      "id": 2,
       "bookName": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "image": "https://i.ibb.co/DwPmFgh/kindpng-81724-1-1.png",
@@ -26,7 +26,7 @@
       "yearOfPublishing": 1960
     },
     {
-      "bookId": 3,
+      "id": 3,
       "bookName": "The Catcher in the Rye",
       "author": "J.D. Salinger",
       "image": "https://i.ibb.co/fGCzYY1/kindpng-1064993.png",
@@ -39,7 +39,7 @@
       "yearOfPublishing": 1951
     },
     {
-      "bookId": 4,
+      "id": 4,
       "bookName": "1984",
       "author": "George Orwell",
       "image": "https://i.ibb.co/dQQ2WF1/kindpng-2592315-1.png",
@@ -52,7 +52,7 @@
       "yearOfPublishing": 1949
     },
     {
-      "bookId": 5,
+      "id": 5,
       "bookName": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "image": "https://i.ibb.co/r3fP1XH/kindpng-4945926-1.png",
@@ -65,7 +65,7 @@
       "yearOfPublishing": 1925
     },
     {
-      "bookId": 6,
+      "id": 6,
       "bookName": "The Fault in Our Stars",
       "author": "John Green",
       "image": "https://i.ibb.co/SV9VgKM/kindpng-5624060-1.png",
@@ -78,7 +78,7 @@
       "yearOfPublishing": 2012
     },
     {
-      "bookId": 7,
+      "id": 7,
       "bookName": "Pride and Prejudice",
       "author": "Jane Austen",
       "image": "https://i.ibb.co/Lr8DZ8Z/kindpng-7318921.png",
@@ -91,7 +91,7 @@
       "yearOfPublishing": 1813
     },
     {
-      "bookId": 8,
+      "id": 8,
       "bookName": "Neuromancer",
       "author": "William Gibson",
       "image": "https://i.ibb.co/SBHHXkt/kindpng-4022054-1.png",
@@ -104,7 +104,7 @@
       "yearOfPublishing": 1984
     },
     {
-      "bookId": 9,
+      "id": 9,
       "bookName": "The Road",
       "author": "Cormac McCarthy",
       "image": "https://i.ibb.co/NjK4v4k/kindpng-2193744-1-1.png",
@@ -117,7 +117,7 @@
       "yearOfPublishing": 2006
     },
     {
-      "bookId": 10,
+      "id": 10,
       "bookName": "Life of Pi",
       "author": "Yann Martel",
       "image": "https://i.ibb.co/0ZnN9xL/pngwing-1-1.png",
@@ -130,7 +130,7 @@
       "yearOfPublishing": 2001
     },
     {
-      "bookId": 11,
+      "id": 11,
       "bookName": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "image":  "https://i.ibb.co/fGCzYY1/kindpng-1064993.png",
@@ -143,7 +143,7 @@
       "yearOfPublishing": 1937
     },
     {
-      "bookId": 12,
+      "id": 12,
       "bookName": "The Martian",
       "author": "Andy Weir",
       "image": "https://i.ibb.co/SV9VgKM/kindpng-5624060-1.png",

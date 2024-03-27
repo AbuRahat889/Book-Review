@@ -17,7 +17,7 @@ const HomePage = () => {
               your bookshelf
             </h1>
             <button className="btn bg-[#23be0a] text-white">
-             <Link to={'/ListedBookes'}> View The List</Link>
+              <Link to={"/ListedBookes"}> View The List</Link>
             </button>
           </div>
         </div>
@@ -27,12 +27,10 @@ const HomePage = () => {
       </h1>
 
       {/* use card */}
-      <div  className="grid md:grid-cols-3 gap-4 mt-10">
-        {
-            BookesData.map( bookes => (
-            <BookItem key={BookesData.id} bookes={bookes}></BookItem>
-            ))
-        }
+      <div className="grid md:grid-cols-3 gap-4 mt-10">
+        {BookesData.map((bookes) => (
+          <BookItem key={BookesData.id} bookes={bookes}></BookItem>
+        ))}
       </div>
     </div>
   );
