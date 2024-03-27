@@ -1,9 +1,8 @@
 
-
 const PagetoRead = () => {
     return (
         <div>
-            <h1>this is graph page</h1>
+            <h1>this is grap page</h1>
         </div>
     );
 };

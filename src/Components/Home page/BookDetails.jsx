@@ -15,21 +15,20 @@ const BookDetails = () => {
 
   const handleApplyBook = () => {
     saveBooksList(idInt);
-
     if (readStatus) {
       setReadStatus(true);
-      toast.error("All Ready Added to read list 1");
+      toast.error("All Ready Added to read list");
     } else {
       setReadStatus(true);
-      toast.success("Added to read list 2");
+      toast.success("Added to read list");
     }
   };
   const handleWhishlist = () => {
     if (wishlistStatus) {
-      toast.error("You have already read this book 3");
+      toast.error("You have already read this book");
     } else {
       setWishlistStatus(true);
-      toast.success("Book added to wishlist 4");
+      toast.success("Book added to wishlist");
     }
   };
 
