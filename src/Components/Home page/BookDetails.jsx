@@ -10,8 +10,6 @@ const BookDetails = () => {
   const idInt = parseInt(id);
   const bookes = bookData.find((bookes) => bookes.id == idInt);
 
-  
-
   //handle read button
   const [readlist, setReadList] = useState([]);
   const handleRead = (book) => {
@@ -41,7 +39,7 @@ const BookDetails = () => {
   };
 
   return (
-    // <h2>this is book details :  </h2>
+   
     <div className="mt-10">
       <div className="hero rounded-lg bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse gap-48">

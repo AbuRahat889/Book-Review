@@ -15,15 +15,16 @@ const ReadBookes = ({ BookesStore }) => {
   } = BookesStore;
   return (
     <div className="mb-4 ">
-      <div className="p-5 card card-side bg-base-100 shadow-xl">
+      <div className="flex flex-col lg:flex-row p-5 card card-side bg-base-100 shadow-xl">
+        <div>
         <img className=" p-10" src={image} alt="" />
-
+        </div>
         <div className="card-body">
           <h2 className="card-title">{bookName}</h2>
           <p>By : {author}</p>
 
           {/* Tags  */}
-          <div className="flex items-center">
+          <div className="flex flex-col lg:flex-row items-center">
             <div className="">
               <p className="flex my-4 w-16 font-bold">
                 Tag:
