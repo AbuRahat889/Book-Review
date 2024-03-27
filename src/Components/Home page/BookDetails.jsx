@@ -10,27 +10,36 @@ const BookDetails = () => {
   const idInt = parseInt(id);
   const bookes = bookData.find((bookes) => bookes.id == idInt);
 
-  const handleReadList = () => {
-    saveBooksList(idInt);
-  };
+  
 
   //handle read button
-  const [Wishlist, setWishlist] = useState([]);
+  const [readlist, setReadList] = useState([]);
   const handleRead = (book) => {
-    
-    handleReadList();
-    const isExit = Wishlist.find((item) => item.id == book.id);
+    saveBooksList(idInt);
+    const isExit = readlist.find((item) => item.id == book.id);
     if (!isExit) {
-      const newBookes = [...Wishlist, book];
-      setWishlist(newBookes);
+      const newBookes = [...readlist, book];
+      setReadList(newBookes);
       toast("Added to Read");
     } else {
-      //use toaster
       toast("All Ready Added!");
     }
   };
 
-  // console.log(bookFind);
+  //handle whishlist
+  const [wishlist, setWishlist] = useState([]);
+  const handleWishlist = (book) => {
+    saveBooksList(idInt);
+    const isExit = wishlist.find((item) => item.id == book.id);
+    if (!isExit) {
+      const newBookes = [...wishlist, book];
+      setWishlist(newBookes);
+      toast("Added to Read");
+    } else {
+      toast("All Ready Added!");
+    }
+  };
+
   return (
     // <h2>this is book details :  </h2>
     <div className="mt-10">
@@ -68,7 +77,7 @@ const BookDetails = () => {
               >
                 Read
               </Link>
-              <Link onClick={handleRead} className="btn ml-4 btn-success">
+              <Link onClick={handleWishlist} className="btn ml-4 btn-success">
                 Wishlist
               </Link>
             </div>
