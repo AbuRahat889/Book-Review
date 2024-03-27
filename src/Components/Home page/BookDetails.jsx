@@ -10,36 +10,30 @@ const BookDetails = () => {
   const idInt = parseInt(id);
   const bookes = bookData.find((bookes) => bookes.id == idInt);
 
-  //handle read button
-  const [readlist, setReadList] = useState([]);
-  const handleRead = (book) => {
+  const [readStatus, setReadStatus] = useState(false);
+  const [wishlistStatus, setWishlistStatus] = useState(false);
+
+  const handleApplyBook = () => {
     saveBooksList(idInt);
-    const isExit = readlist.find((item) => item.id == book.id);
-    if (!isExit) {
-      const newBookes = [...readlist, book];
-      setReadList(newBookes);
-      toast("Added to Read");
+
+    if (readStatus) {
+      setReadStatus(true);
+      toast.error("All Ready Added to read list 1");
     } else {
-      toast("All Ready Added!");
+      setReadStatus(true);
+      toast.success("Added to read list 2");
     }
   };
-
-  //handle whishlist
-  const [wishlist, setWishlist] = useState([]);
-  const handleWishlist = (book) => {
-    saveBooksList(idInt);
-    const isExit = wishlist.find((item) => item.id == book.id);
-    if (!isExit) {
-      const newBookes = [...wishlist, book];
-      setWishlist(newBookes);
-      toast("Added to Read");
+  const handleWhishlist = () => {
+    if (wishlistStatus) {
+      toast.error("You have already read this book 3");
     } else {
-      toast("All Ready Added!");
+      setWishlistStatus(true);
+      toast.success("Book added to wishlist 4");
     }
   };
 
   return (
-   
     <div className="mt-10">
       <div className="hero rounded-lg bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse gap-48">
@@ -70,12 +64,12 @@ const BookDetails = () => {
 
             <div className="mt-4">
               <Link
-                onClick={handleRead}
+                onClick={handleApplyBook}
                 className="btn btn-outline btn-success"
               >
                 Read
               </Link>
-              <Link onClick={handleWishlist} className="btn ml-4 btn-success">
+              <Link onClick={handleWhishlist} className="btn ml-4 btn-success">
                 Wishlist
               </Link>
             </div>
