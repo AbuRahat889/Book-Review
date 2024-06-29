@@ -2,7 +2,7 @@
 
 # MyBookList Website
 
-[Live Site](https://www.example.com)
+Live Site : https://assignment08-book-vibe.netlify.app
 
 ## Features and Characteristics
 
